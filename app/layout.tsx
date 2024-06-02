@@ -24,7 +24,7 @@ export default function RootLayout({
         <link rel="icon" href="/react.png" sizes="any" />
       </head>
       <body className={inter.className}>
-      <FloatingNav navItems={navItems} />
+        <FloatingNav navItems={navItems} />
 
         <ThemeProvider
           attribute="class"
