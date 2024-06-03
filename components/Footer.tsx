@@ -32,11 +32,11 @@ const Footer = () => {
         </a>
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
-        <h1 className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2024 LossLess-Code
+        <h1 className="md:text-base text-md md:font-normal font-light">
+          Copyright © 2024 LossLess-Code🤞
         </h1>
 
-        <div className="flex items-center md:gap-3 gap-6">
+        <div className="flex items-center lg:mt-0 mt-8 md:gap-3 gap-6">
           <div className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
             {/* social icon s */}
 
