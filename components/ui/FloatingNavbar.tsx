@@ -8,6 +8,7 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 export const FloatingNav = ({
   navItems,
@@ -39,6 +40,7 @@ export const FloatingNav = ({
       }
     }
   });
+  const pathname = usePathname();
 
   return (
     <AnimatePresence mode="wait">
@@ -65,18 +67,21 @@ export const FloatingNav = ({
           border: "1px solid rgba(255, 255, 255, 0.125)",
         }}
       >
-        {navItems.map((navItem: any, idx: number) => (
-          <Link
-            key={`link=${idx}`}
-            href={navItem.link}
-            className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
-            )}
-          >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="text-sm !cursor-pointer">{navItem.name}</span>
-          </Link>
-        ))}
+          {navItems.map((navItem: any, idx: number) => (
+              <Link
+                key={`link=${idx}`}
+                href={navItem.link}
+                className={cn(
+                  "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+                )}
+              >
+                <span className={
+                  pathname === navItem.link
+                    ? " text-blue-600"
+                    : ""
+                }>{navItem.name}</span>
+              </Link>
+          ))}
       </motion.div>
     </AnimatePresence>
   );
