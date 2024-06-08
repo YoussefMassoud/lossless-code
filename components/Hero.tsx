@@ -37,22 +37,19 @@ const Hero = () => {
 
           <TypewriterEffectSmooth
             words={[
-              { text: "Transforming" },
-              { text: "Concepts" },
-              { text: "into" },
+              { text: "Crafting" },
               { text: "Seamless" },
-              { text: "User",
-                className:"text-blue-500"
-               },
-              { text: "Experiences" ,
-                className:"text-blue-500"
-              },
+              { text: "Websites" },
+              { text: "with" },
+              { text: "Exceptional", className: "text-blue-500" },
+              { text: "UX", className: "text-blue-500" },
+              { text: "Design", className: "text-blue-500" },
             ]}
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Adrian, a Next.js Developer based in Croatia.
+            Hi! Their, a Next.js Developer based in Egypt.
           </p>
 
           <a href="/projects">
