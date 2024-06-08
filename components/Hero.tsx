@@ -41,8 +41,12 @@ const Hero = () => {
               { text: "Concepts" },
               { text: "into" },
               { text: "Seamless" },
-              { text: "User" },
-              { text: "Experiences" },
+              { text: "User",
+                className:"text-blue-500"
+               },
+              { text: "Experiences" ,
+                className:"text-blue-500"
+              },
             ]}
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
