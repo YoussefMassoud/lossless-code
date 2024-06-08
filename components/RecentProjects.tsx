@@ -7,9 +7,15 @@ import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
 
 const RecentProjects = () => {
+  const getButtonColor =(status:String)=>{ if (status === "Active") {
+    return "bg-[#17C964]  text-[#020E07] py-2 px-3 rounded-xl text-sm";
+  } else if (status === "Demo") {
+    return "bg-[#9353D3] font-semibold  text-[#FAF7FD] py-2 px-3 rounded-xl text-sm";
+  }}
+ 
   return (
     <div className="py-36">
-      <h1 className="heading text-white">
+      <h1 className="heading text-white ">
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
       </h1>
@@ -37,8 +43,11 @@ const RecentProjects = () => {
                 />
               </div>
 
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                {item.title}
+              <h1 className="flex justify-between font-bold  lg:text-2xl md:text-xl text-base line-clamp-1 text-white">
+                {item.title}{" "}
+                <button className={`py-2 px-3 rounded-xl text-sm ${getButtonColor(item.status)}`}>
+                  {item.status}
+                </button>
               </h1>
 
               <p
