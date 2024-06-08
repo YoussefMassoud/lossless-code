@@ -7,12 +7,14 @@ import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
 
 const RecentProjects = () => {
-  const getButtonColor =(status:String)=>{ if (status === "Active") {
-    return "bg-[#17C964]  text-[#020E07] py-2 px-3 rounded-xl text-sm";
-  } else if (status === "Demo") {
-    return "bg-[#9353D3] font-semibold  text-[#FAF7FD] py-2 px-3 rounded-xl text-sm";
-  }}
- 
+  const getButtonColor = (status: String) => {
+    if (status === "Active") {
+      return "bg-[#17C964]  text-[#020E07] py-2 px-3 rounded-xl text-sm";
+    } else if (status === "Demo") {
+      return "bg-[#9353D3] font-semibold  text-[#FAF7FD] py-2 px-3 rounded-xl text-sm";
+    }
+  };
+
   return (
     <div className="py-36">
       <h1 className="heading text-white ">
@@ -21,14 +23,13 @@ const RecentProjects = () => {
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {projects.map((item) => (
-          <div
+          <a
+            href={item.link}
+            target="_blank"
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
           >
-            <PinContainer
-              title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji"
-            >
+            <PinContainer title={item.title} href={item.link}>
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
@@ -45,7 +46,11 @@ const RecentProjects = () => {
 
               <h1 className="flex justify-between font-bold  lg:text-2xl md:text-xl text-base line-clamp-1 text-white">
                 {item.title}{" "}
-                <button className={`py-2 px-3 rounded-xl text-sm ${getButtonColor(item.status)}`}>
+                <button
+                  className={`py-2 px-3 rounded-xl text-sm ${getButtonColor(
+                    item.status
+                  )}`}
+                >
                   {item.status}
                 </button>
               </h1>
@@ -83,7 +88,7 @@ const RecentProjects = () => {
                 </div>
               </div>
             </PinContainer>
-          </div>
+          </a>
         ))}
       </div>
     </div>
