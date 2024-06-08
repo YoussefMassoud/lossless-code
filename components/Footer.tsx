@@ -4,7 +4,7 @@ import MagicButton from "./MagicButton";
 
 const Footer = () => {
   return (
-    <footer className="w-full mb-[100px] md:mb-5 pb-10" id="contact">
+    <footer className="w-full mb-[100px] md:mb-5 pb-10 text-blue-100" id="contact">
       {/* background grid */}
       <div className="w-full absolute left-0 -bottom-72 min-h-96">
         <img
@@ -32,7 +32,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
-        <h1 className="md:text-base text-md md:font-normal font-light">
+        <h1 className="md:text-base text-md md:font-normal text-blue-100 font-light">
           Copyright © 2024 LossLess-Code🤞
         </h1>
 
