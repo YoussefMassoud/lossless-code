@@ -8,7 +8,7 @@ export const navItems = [
 export const projects = [
   {
     id: 1,
-    title: "E-commerce Demo",
+    title: "E-commerce Demo ",
     des: "This is E-commerce with a lot of functions, admin dashboard, and payment methods. You can check it out.",
     img: "/p-webforyou.jpg",
     iconLists: [ "/next.svg" ,"/tail.svg", "/ts.svg", ],
@@ -22,7 +22,7 @@ export const projects = [
     des: "This site is about gaining rewards from completing tasks.",
     img: "/project4.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://ui.yoom.com",
+    link: "https://offerwall.adspiritmedia.com/10000/LossLess-code",
     status: "Active"
   },
   {
@@ -31,7 +31,7 @@ export const projects = [
     des: "This site is about gaining rewards from completing tasks.",
     img: "/project5.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://ui.aiimg.com",
+    link: "https://offerwall.adhopemedia.com/10000/LossLess-code",
     status: "Active"
   },
   {
@@ -40,7 +40,7 @@ export const projects = [
     des: "This site is about gaining rewards from completing tasks.",
     img: "/PerkosImage.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://ui.apple.com",
+    link: "https://wall.perkox.com/10000/LossLess-code",
     status: "Active"
   },
 ];
