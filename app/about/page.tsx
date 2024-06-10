@@ -21,7 +21,7 @@ const About = () => {
                   <ul className="list-decimal pl-8">
                     <li className="mb-2">
                       <TextGenerateEffect
-                        words="At [Company Name],"
+                        words="At Lossless Code,"
                         className="text-start text-[25px] "
                       />
                       <p className="text-gray-400 text-sm">
