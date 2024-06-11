@@ -2,7 +2,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
-import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+import { TextGenerateEffect } from "./ui/TextGenerateEffectHero";
 
 const Hero = () => {
   return (
@@ -20,7 +20,7 @@ const Hero = () => {
       </div>
 
       <div
-        className="h-screen w-full bg-black-100 bg-grid-white/[0.03] 
+        className="h-screen w-full bg-black-100  bg-grid-white/[0.03] 
        absolute top-0 left-0 flex items-center justify-center"
       >
         <div
@@ -32,19 +32,11 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Dynamic Web Magic with Next.js
+            DYNAMIC WEB MAGIC WITH NEXT.JS
           </p>
 
-          <TypewriterEffectSmooth
-            words={[
-              { text: "Crafting" },
-              { text: "Seamless" },
-              { text: "Websites" },
-              { text: "with" },
-              { text: "Exceptional", className: "text-blue-500" },
-              { text: "UX", className: "text-blue-500" },
-              { text: "Design", className: "text-blue-500" },
-            ]}
+          <TextGenerateEffect
+            words="Crafting Seamless Websites with Exceptional UX Design"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
@@ -52,7 +44,7 @@ const Hero = () => {
             Hi! Their, a Next.js Developer based in Egypt.
           </p>
 
-          <a href="/projects">
+          <a href="#about">
             <MagicButton
               title="Show my work"
               icon={<FaLocationArrow />}
