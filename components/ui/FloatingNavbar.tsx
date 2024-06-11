@@ -24,6 +24,7 @@ export const FloatingNav = ({
   const { scrollYProgress } = useScroll();
 
   const [visible, setVisible] = useState(true);
+  const pathname = usePathname();
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
@@ -40,7 +41,6 @@ export const FloatingNav = ({
       }
     }
   });
-  const pathname = usePathname();
 
   return (
     <AnimatePresence mode="wait">
@@ -50,8 +50,8 @@ export const FloatingNav = ({
           y: -100,
         }}
         animate={{
-          y: 0,
-          opacity: 1,
+          y: visible ? 0 : -100,
+          opacity: visible ? 1 : 0,
         }}
         transition={{
           duration: 0.2,
@@ -67,21 +67,21 @@ export const FloatingNav = ({
           border: "1px solid rgba(255, 255, 255, 0.125)",
         }}
       >
-          {navItems.map((navItem: any, idx: number) => (
-              <Link
-                key={`link=${idx}`}
-                href={navItem.link}
-                className={cn(
-                  "relative text-neutral-50 items-center flex space-x-1  hover:text-neutral-300 "
-                )}
-              >
-                <span className={
-                  pathname === navItem.link
-                    ? " text-blue-600"
-                    : ""
-                }>{navItem.name}</span>
-              </Link>
-          ))}
+        {navItems.map((navItem: any, idx: number) => (
+               <Link
+               key={`link=${idx}`}
+               href={navItem.link}
+               className={cn(
+                 "relative text-neutral-50 items-center flex space-x-1  hover:text-neutral-300 "
+               )}
+             >
+               <span className={
+                 pathname === navItem.link
+                   ? " text-blue-600"
+                   : ""
+               }>{navItem.name}</span>
+             </Link>
+        ))}
       </motion.div>
     </AnimatePresence>
   );
