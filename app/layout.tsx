@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/react.png" sizes="any" />
+        <link rel="icon" href="/logo.jpeg" sizes="any" />
       </head>
       <body className={inter.className}>
         <div className="relative w-full">
