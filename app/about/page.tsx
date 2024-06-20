@@ -52,8 +52,8 @@ const About = () => {
                       scalable solutions that push the boundaries of what's
                       possible in web development.
                     </h1>
-                    <li className="font-thin ml-4 ">
-                      <span className="font-medium">
+                    <li className="font-thin ml-4 text-gray-300">
+                      <span className="font-medium ">
                         Expertise in JavaScript:
                       </span>{" "}
                       We leverage the power of JavaScript to build robust and
@@ -62,14 +62,14 @@ const About = () => {
                       tackle any challenge in the software development
                       lifecycle.
                     </li>
-                    <li className="font-thin ml-4 ">
+                    <li className="font-thin ml-4 text-gray-300">
                       <span className="font-medium">Innovative Solutions:</span>{" "}
                       At Lossless Code, we are committed to creating innovative
                       solutions that address real-world problems. Our projects
                       are designed to enhance user experiences, streamline
                       processes, and deliver exceptional performance.
                     </li>
-                    <li className="font-thin ml-4 ">
+                    <li className="font-thin ml-4 text-gray-300">
                       <span className="font-medium">Dedicated Team:</span> As
                       software engineers, we bring a wealth of experience and a
                       deep understanding of the latest industry trends. Our team
