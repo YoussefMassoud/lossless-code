@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import "./globals.css";
-import { ThemeProvider } from "./provider";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { navItems } from "@/data";
 
@@ -26,14 +25,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="relative w-full">
           <FloatingNav navItems={navItems} />
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
             {children}
-          </ThemeProvider>
         </div>
       </body>
     </html>
