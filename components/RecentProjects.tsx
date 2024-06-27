@@ -1,8 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-
 import { FaLocationArrow } from "react-icons/fa6";
-
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
 import Link from "next/link";
@@ -15,7 +13,6 @@ const RecentProjects = () => {
       return "bg-[#9353D3] font-semibold  text-[#FAF7FD] py-2 px-3 rounded-xl text-sm";
     }
   };
-
   return (
     <div className="py-36">
       <h1 className="heading text-white ">
@@ -45,7 +42,6 @@ const RecentProjects = () => {
                     className="z-10 absolute h-full w-full bottom-0"
                   />
                 </div>
-
                 <h1 className="flex justify-between font-bold  lg:text-2xl md:text-xl text-base line-clamp-1 text-white">
                   {item.title}{" "}
                   <button
@@ -56,7 +52,6 @@ const RecentProjects = () => {
                     {item.status}
                   </button>
                 </h1>
-
                 <p
                   className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
                   style={{
@@ -66,7 +61,6 @@ const RecentProjects = () => {
                 >
                   {item.des}
                 </p>
-
                 <div className="flex items-center justify-between mt-7 mb-3">
                   <div className="flex items-center">
                     {item.iconLists.map((icon, index) => (
@@ -81,7 +75,6 @@ const RecentProjects = () => {
                       </div>
                     ))}
                   </div>
-
                   <div className="flex justify-center items-center">
                     <p className="flex lg:text-xl md:text-xs text-sm text-purple">
                       Check Live Site
@@ -97,5 +90,4 @@ const RecentProjects = () => {
     </div>
   );
 };
-
 export default RecentProjects;
