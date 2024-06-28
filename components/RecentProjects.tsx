@@ -2,68 +2,80 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
-
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
+import { useEffect, useState } from "react";
 
 const RecentProjects = () => {
-  const getButtonColor = (status: String) => {
+  const [projectList, setProjectList] = useState(projects);
+
+  useEffect(() => {
+    // This is to simulate fetching data on the client side.
+    // Ensure your data fetching mechanism is consistent between server and client
+    setProjectList(projects);
+  }, []);
+
+  const getButtonColor = (status: string) => {
     if (status === "Active") {
-      return "bg-[#17C964]  text-[#020E07] py-2 px-3 rounded-xl text-sm";
+      return "bg-[#17C964] text-[#020E07] py-2 px-3 rounded-xl text-sm";
     } else if (status === "Demo") {
-      return "bg-[#9353D3] font-semibold  text-[#FAF7FD] py-2 px-3 rounded-xl text-sm";
+      return "bg-[#9353D3] font-semibold text-[#FAF7FD] py-2 px-3 rounded-xl text-sm";
     }
   };
 
   return (
     <div className="py-36">
-      <h1 className="heading text-white ">
+      <h1 className="heading text-white">
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-        {projects.map((item) => (
-          <a
-            href={item.link}
-            target="_blank"
+        {projectList.map((item) => (
+          <div
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
           >
             <PinContainer title={item.title} href={item.link}>
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                <div
-                  className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                  style={{ backgroundColor: "#13162D" }}
-                >
-                  <img src="/bg.png" alt="bgimg" />
-                </div>
-                <img
-                  src={item.img}
-                  alt="cover"
-                  className="z-10 absolute h-full w-full bottom-0"
-                />
-              </div>
-
-              <h1 className="flex justify-between font-bold  lg:text-2xl md:text-xl text-base line-clamp-1 text-white">
-                {item.title}{" "}
-                <button
-                  className={`py-2 px-3 rounded-xl text-sm ${getButtonColor(
-                    item.status
-                  )}`}
-                >
-                  {item.status}
-                </button>
-              </h1>
-
-              <p
-                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-                style={{
-                  color: "#BEC1DD",
-                  margin: "1vh 0",
-                }}
+              <a
+                href={item.link}
+                target="_blank"
+                className="sm:w-96 w-[80vw] flex flex-col items-center"
               >
-                {item.des}
-              </p>
+                <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+                  <div
+                    className="relative w-full h-full overflow-hidden lg:rounded-3xl"
+                    style={{ backgroundColor: "#13162D" }}
+                  >
+                    <img src="/bg.png" alt="bgimg" />
+                  </div>
+                  <img
+                    src={item.img}
+                    alt="cover"
+                    className="z-10 absolute h-full w-full bottom-0"
+                  />
+                </div>
+
+                <h1 className="flex justify-between font-bold lg:text-2xl md:text-xl text-base line-clamp-1 text-white">
+                  {item.title}
+                  <button
+                    className={`py-2 px-3 rounded-xl text-sm ${getButtonColor(
+                      item.status
+                    )}`}
+                  >
+                    {item.status}
+                  </button>
+                </h1>
+
+                <p
+                  className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
+                  style={{
+                    color: "#BEC1DD",
+                    margin: "1vh 0",
+                  }}
+                >
+                  {item.des}
+                </p>
+              </a>
 
               <div className="flex items-center justify-between mt-7 mb-3">
                 <div className="flex items-center">
@@ -88,7 +100,7 @@ const RecentProjects = () => {
                 </div>
               </div>
             </PinContainer>
-          </a>
+          </div>
         ))}
       </div>
     </div>
