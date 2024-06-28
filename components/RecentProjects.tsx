@@ -31,14 +31,16 @@ const RecentProjects = () => {
       <ul className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {projects.map((item) => (
           <li key={item.id}>
-            <Link
-              href={item.link}
-              target="_blank"
+            <div
               className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
               key={item.id}
             >
               <PinContainer title={item.title} href={item.link}>
-                <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+                <Link
+                  href={item.link}
+                  target="_blank"
+                  className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10"
+                >
                   <div
                     className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                     style={{ backgroundColor: "#13162D" }}
@@ -50,7 +52,7 @@ const RecentProjects = () => {
                     alt="cover"
                     className="z-10 absolute h-full w-full bottom-0"
                   />
-                </div>
+                </Link>
                 <h1 className="flex justify-between font-bold  lg:text-2xl md:text-xl text-base line-clamp-1 text-white">
                   {item.title}{" "}
                   <button
@@ -92,7 +94,7 @@ const RecentProjects = () => {
                   </div>
                 </div>
               </PinContainer>
-            </Link>
+            </div>
           </li>
         ))}
       </ul>
