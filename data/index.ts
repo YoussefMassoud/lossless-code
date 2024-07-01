@@ -22,7 +22,7 @@ export const projects = [
     title: "offerwall.adspiritmedia",
     des: "This site is about gaining rewards from completing tasks.",
     img: "/project4.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
     link: "https://offerwall.adspiritmedia.com/10000/LossLess-code",
     status: "Active"
   },
@@ -31,7 +31,7 @@ export const projects = [
     title: "offerwall.adhopemedia",
     des: "This site is about gaining rewards from completing tasks.",
     img: "/project5.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
     link: "https://offerwall.adhopemedia.com/10000/LossLess-code",
     status: "Active"
   },
@@ -40,7 +40,7 @@ export const projects = [
     title: "Wall.perkox",
     des: "This site is about gaining rewards from completing tasks.",
     img: "/PerkosImage.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
     link: "https://wall.perkox.com/10000/LossLess-code",
     status: "Active"
   },
