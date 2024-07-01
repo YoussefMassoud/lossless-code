@@ -86,6 +86,7 @@
 
 
 /* //social icon */
+/* //social icon */
 .card {
   width: fit-content;
   height: fit-content;
@@ -96,30 +97,60 @@
   gap: 20px;
 }
 
-/* for all social containers*/
+/* for all social containers */
 .socialContainer {
   width: 48px;
   height: 48px;
   border-radius: 5px;
-  background-color: #0D1424;
+  background-color: #0d1424;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   transition-duration: 0.3s;
 }
-/* instagram*/
+
+.socialText {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.socialContainer:hover .socialText {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+
+/* instagram */
 .containerOne:hover {
-  background-color: #d62976;
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5b51db,
+    #b33ab4,
+    #c135b4,
+    #e1306c,
+    #fd1f1f
+  );
   transition-duration: 0.3s;
 }
 
-/* linkdin*/
+/* linkedin */
 .containerThree:hover {
   background-color: #0072b1;
   transition-duration: 0.3s;
 }
-/* Whatsapp*/
+
+/* whatsapp */
 .containerFour:hover {
   background-color: green;
   transition-duration: 0.3s;
@@ -147,7 +178,6 @@
     transform: translateY(-50px);
     opacity: 0;
   }
-
   100% {
     transform: translateY(0);
     opacity: 1;
