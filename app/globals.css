@@ -109,12 +109,9 @@
   overflow: hidden;
   transition-duration: 0.3s;
 }
-
 .socialText {
   position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 60px; 
   color: #fff;
   padding: 6px 10px;
   border-radius: 5px;
@@ -127,9 +124,8 @@
 .socialContainer:hover .socialText {
   opacity: 1;
   visibility: visible;
-  top: -50px;
+  transition: all 0.3s ease;
 }
-
 /* instagram */
 .containerOne:hover {
   background: linear-gradient(
