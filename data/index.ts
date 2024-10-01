@@ -37,12 +37,12 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Wall.perkox",
-    des: "This site is about gaining rewards from completing tasks.",
-    img: "/PerkosImage.png",
+    title: "Bibo Travel",
+    des: "Explore Egypt with Bibo Travel",
+    img: "/bibo.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
-    link: "https://wall.perkox.com/10000/LossLess-code",
-    status: "Active"
+    link: "https://www.bibotraveleg.com/",
+    status: "In Process"
   },
 ];
 

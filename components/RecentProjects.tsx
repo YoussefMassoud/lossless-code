@@ -20,8 +20,11 @@ const RecentProjects = () => {
       return "bg-[#17C964] text-[#020E07] py-2 px-3 rounded-xl text-sm";
     } else if (status === "Demo") {
       return "bg-[#9353D3] font-semibold text-[#FAF7FD] py-2 px-3 rounded-xl text-sm";
+    } else if (status === "In Process") {
+      return "bg-[#FFA500] text-white py-2 px-3 rounded-xl text-sm"; // Customize the color as needed
     }
   };
+
   return (
     <div className="py-36">
       <h1 className="heading text-white">
@@ -29,11 +32,10 @@ const RecentProjects = () => {
         <span className="text-purple">recent projects</span>
       </h1>
       <ul className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-        {projects.map((item) => (
+        {projectList.map((item) => (
           <li key={item.id}>
             <div
               className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
-              key={item.id}
             >
               <PinContainer title={item.title} href={item.link}>
                 <Link
@@ -53,7 +55,7 @@ const RecentProjects = () => {
                     className="z-10 absolute h-full w-full bottom-0"
                   />
                 </Link>
-                <h1 className="flex justify-between font-bold  lg:text-2xl md:text-xl text-base line-clamp-1 text-white">
+                <h1 className="flex justify-between font-bold lg:text-2xl md:text-xl text-base line-clamp-1 text-white">
                   {item.title}{" "}
                   <button
                     className={`py-2 px-3 rounded-xl text-sm ${getButtonColor(
@@ -82,7 +84,7 @@ const RecentProjects = () => {
                           transform: `translateX(-${5 * index + 2}px)`,
                         }}
                       >
-                        <img src={icon} alt="icon5" className="p-2" />
+                        <img src={icon} alt={`icon-${index}`} className="p-2" />
                       </div>
                     ))}
                   </div>
@@ -101,4 +103,5 @@ const RecentProjects = () => {
     </div>
   );
 };
+
 export default RecentProjects;

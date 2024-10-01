@@ -35,10 +35,10 @@ const About = () => {
             <div className="more-page flex flex-col row-gap-10 p-5 md:p-10">
               <div className="flex lg:flex-row flex-col gap-3 w-full">
                 <div className="flex flex-col gap-4">
-                  <div className="flex">
+                  {/* <div className="flex">
                     <AnimatedTooltip items={people} />
                     <AnimatedTooltip items={people2} />
-                  </div>
+                  </div> */}
                   <div className="flex flex-col gap-4">
                     <h1 className="text-blue-500 text-2xl font-medium">
                       Founders of Lossless Code
